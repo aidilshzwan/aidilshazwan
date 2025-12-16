@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- MANDATORY: Ensure responsiveness on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education | [Aidil Shazwan]</title>
+    <!-- Statement of Responsibility/Ownership -->
+    <meta name="author" content="[Aidil Shazwan] - IMD318 Individual Project">
+
+    <!-- Load Tailwind CSS via CDN for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the project */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f9; /* Light background */
+            color: #333;
+        }
+
+        /* Fixed navigation bar styling */
+        .header-nav {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        /* Custom Table Styling for better display on small screens */
+        .responsive-table-container {
+            overflow-x: auto; /* Allows horizontal scrolling on small screens if needed */
+        }
+        .data-table th, .data-table td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .data-table th {
+            background-color: #f3f4f6;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        /* --- CSS UNTUK KESAN SLOW MOTION REVEAL --- */
+        /* Kelas asas: mulakan dengan tidak kelihatan dan sedikit ke bawah */
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(30px); 
+            /* Transisi yang sangat perlahan (1.8 saat) untuk kesan "slow motion" */
+            transition: opacity 1.8s ease-out, transform 1.8s ease-out; 
+            will-change: opacity, transform;
+        }
+        /* Kelas aktif: kelihatan dan bergerak ke posisi asal */
+        .reveal-item.is-visible {
+            opacity: 1;
+            transform: translateY(0); 
+        }
+        /* --- TAMAT CSS KESAN SLOW MOTION --- */
+    </style>
+</head>
+<body>
+
+    <!-- 1. FIXED NAVIGATION BAR -->
+    <header class="header-nav bg-white">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-indigo-600 hover:text-indigo-800 transition duration-300">
+                        [Aidil Shazwan]'s Portfolio
+                    </a>
+                </div>
+                <!-- Navigation Links -->
+                <div class="flex space-x-4">
+                    <a href="index.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Home</a>
+                    <a href="biodata.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Biodata</a>
+                    <a href="experience.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Experience</a>
+                    <!-- Active Link Styling -->
+                    <a href="education.html" class="text-white bg-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Education</a>
+                    <a href="family.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Family</a>
+                    <!-- Link ke Gallery -->
+                    <a href="gallery.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Gallery</a>
+                    <!-- Link ke Media Lab -->
+                    <a href="media.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Media Lab</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="py-16 sm:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- SECTION 1: TITLE -->
+            <!-- Tambah kelas reveal-item dan data-delay=0 -->
+            <div class="text-center mb-12 reveal-item" data-delay="0">
+                <h1 class="text-4xl font-extrabold text-gray-900 border-b-4 border-indigo-500 inline-block pb-1">
+                    Academic Background
+                </h1>
+                <p class="text-gray-500 mt-2">A summary of my educational journey and academic achievements.</p>
+            </div>
+
+            <!-- SECTION 2: Current/Highest Education -->
+            <!-- Tambah kelas reveal-item dan data-delay=300 -->
+            <section class="bg-white p-8 rounded-2xl shadow-xl mb-12 border-t-4 border-indigo-600 reveal-item" data-delay="300">
+                <h2 class="text-3xl font-bold text-indigo-700 mb-2">
+                    Diploma in Information Management
+                </h2>
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">
+                    Universiti Teknologi MARA (UiTM), Johor, Segamat
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-lg mb-6">
+                    <p class="font-medium text-gray-800">
+                        <span class="text-indigo-500">Duration:</span> Sept 2023 - Present (Expected Graduation: June 2027)
+                    </p>
+                    <p class="font-medium text-gray-800">
+                        <span class="text-indigo-500">Faculty:</span> Faculty of Science Information
+                    </p>
+                    <p class="font-medium text-gray-800">
+                        <span class="text-indigo-500">Current GPA:</span> 3.5 / 4.00
+                    </p>
+                </div>
+
+                <p class="text-gray-600 mb-6">
+                    Specializing in Web Content Management and Design, my studies have focused on how to manage record, and front-end development using HTML, CSS, and basic scripting. Key coursework included Database Management, Information Management, and Multimedia Applications.
+                </p>
+
+                <!-- HTML TABLE for Detailed Coursework/Academic Data -->
+                <h4 class="text-xl font-bold text-gray-800 mb-3 border-b pb-1">Key Modules & Performance (Example Data)</h4>
+                
+                <div class="responsive-table-container">
+                    <table class="data-table w-full text-sm text-gray-700 rounded-xl overflow-hidden">
+                        <!-- Table Headings -->
+                        <thead>
+                            <tr class="bg-gray-100 uppercase text-xs">
+                                <th class="rounded-tl-lg">Code</th>
+                                <th>Subject Title</th>
+                                <th>Semester</th>
+                                <th class="rounded-tr-lg">Grade</th>
+                            </tr>
+                        </thead>
+                        <!-- Table Body -->
+                        <tbody>
+                            <tr class="hover:bg-indigo-50 transition duration-150">
+                                <td>IMD261</td>
+                                <td class="font-semibold">Database for Business Information Professionals</td>
+                                <td>4</td>
+                                <td class="font-bold text-yellow-600">B+</td>
+                            </tr>
+                            <tr class="hover:bg-indigo-50 transition duration-150">
+                                <td>IMC258</td>
+                                <td class="font-semibold">Metadata Development in Information Management</td>
+                                <td>4</td>
+                                <td><span class="font-bold text-green-600">A</span></td>
+                            </tr>
+                            <tr class="hover:bg-indigo-50 transition duration-150">
+                                <td>IMD223</td>
+                                <td class="font-semibold">Introduction to Cataloging</td>
+                                <td>4</td>
+                                <td><span class="font-bold text-green-600">A</span></td>
+                            </tr>
+                            <tr class="hover:bg-indigo-50 transition duration-150">
+                                <td>IMD262</td>
+                                <td class="font-semibold">Introduction to Electronic Recordkeeping</td>
+                                <td>4</td>
+                                <td class="font-bold text-yellow-600">B+</td>
+                            </tr>
+                        </tbody>
+                        <!-- Table Footer (Optional, for summary) -->
+                        <tfoot class="bg-gray-50">
+                            <tr>
+                                <td colspan="3" class="text-right font-bold text-gray-800">Total Credits Taken:</td>
+                                <td class="font-bold">75</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+            <!-- End Current Education Section -->
+
+            <!-- SECTION 3: Early Education Section -->
+            <!-- Tambah kelas reveal-item. Delay automatik dikira oleh JS. -->
+            <section class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-teal-500 reveal-item">
+                <h2 class="text-3xl font-bold text-teal-700 mb-4">
+                    Early Education History
+                </h2>
+
+                <!-- Secondary School Item (SPM) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start mb-6 pb-4 border-b">
+                    
+                    <!-- Left Column (Content) -->
+                    <div class="md:col-span-2">
+                        <h3 class="text-xl font-semibold text-gray-800">
+                            Sijil Pelajaran Malaysia (SPM)
+                        </h3>
+                        <p class="text-lg text-gray-700">
+                            SMK Bukit Sentosa | 2018 - 2023
+                        </p>
+                        <ul class="list-disc list-outside text-gray-600 space-y-1 mt-2 pl-6">
+                            <li>Achieved 4As in the examination.</li>
+                            <li>Served as the President of the Kadet Polis for two years.</li>
+                            <li><abbr title="Sijil Pelajaran Malaysia">SPM</abbr> is the national examination taken at the end of secondary school.</li>
+                            <li>
+                                <!-- Link text changed to English -->
+                                <a href="https://ms.wikipedia.org/wiki/Sekolah_Menengah_Kebangsaan_Bukit_Sentosa" class="text-indigo-600 hover:text-indigo-800 underline transition duration-300" target="_blank">
+                                    More Information (Wikipedia)
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Right Column (Image Slot) -->
+                    <div class="md:col-span-1 flex justify-center md:justify-end p-2 w-full">
+                        <!-- SILA GANTIKAN URL DI BAWAH DENGAN PAUTAN LOGO SEKOLAH SMK BUKIT SENTOSA ANDA (FORMAT: .JPG) -->
+                        <img 
+                            src="images/S1.jpg" 
+                            alt="Logo SMK Bukit Sentosa (JPG Format)" 
+                            class="w-32 h-32 object-contain rounded-xl border p-1 shadow-md" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/128x128/A0AEC0/000000?text=SPM+Logo';"
+                        >
+                    </div>
+                </div>
+                <!-- End Secondary School Item -->
+                
+                <!-- Primary School Item -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start mb-6 pb-4 border-b">
+                    
+                    <!-- Left Column (Content) -->
+                    <div class="md:col-span-2">
+                        <h3 class="text-xl font-semibold text-gray-800">
+                            Primary School (Sekolah Kebangsaan)
+                        </h3>
+                        <p class="text-lg text-gray-700">
+                            SK Bukit Beruntung 2 | 2012 - 2017
+                        </p>
+                        <ul class="list-disc list-outside text-gray-600 space-y-1 mt-2 pl-6">
+                            <li>Active participation in the school's reading program.</li>
+                            <li>Minimum result in UPSR.</li>
+                            <li>
+                                <!-- Link text changed to English -->
+                                <a href="https://ms.wikipedia.org/wiki/Sekolah_Kebangsaan_Bukit_Beruntung_2" class="text-indigo-600 hover:text-indigo-800 underline transition duration-300" target="_blank">
+                                    More Information (Wikipedia)
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Right Column (Image Slot) -->
+                    <div class="md:col-span-1 flex justify-center md:justify-end p-2 w-full">
+                        <!-- SILA GANTIKAN URL DI BAWAH DENGAN PAUTAN LOGO SEKOLAH SK BUKIT BERUNTUNG 2 ANDA (FORMAT: .JPG) -->
+                        <img 
+                            src="images/S2.jpg" 
+                            alt="Logo SK Bukit Beruntung 2 (JPG Format)" 
+                            class="w-32 h-32 object-contain rounded-xl border p-1 shadow-md"
+                            onerror="this.onerror=null; this.src='https://placehold.co/128x128/A0AEC0/000000?text=Primary+Logo';"
+                        >
+                    </div>
+                </div>
+                <!-- End Primary School Item -->
+
+                <!-- Kindergarten Item (No change) -->
+                <div class="mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">
+                        Kindergarten (Tadika)
+                    </h3>
+                    <p class="text-lg text-gray-700">
+                        Prasekolah at SKBB2 | 2011
+                    </p>
+                    <p class="text-gray-600 mt-2">
+                        First exposure to learning environments and social development.
+                    </p>
+                    <ul class="list-disc list-outside text-gray-600 space-y-1 mt-2 pl-6">
+                        <li>
+                            <!-- Link text changed to English -->
+                            <a href="https://ms.wikipedia.org/wiki/Sekolah_Kebangsaan_Bukit_Beruntung_2" class="text-indigo-600 hover:text-indigo-800 underline transition duration-300" target="_blank">
+                                More Information (Wikipedia)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </section>
+
+        </div>
+    </main>
+    
+    <!-- 2. FOOTER (Consistent with other pages) -->
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm mb-2">
+                &copy; 2025 [Aidil Shazwan]. All Rights Reserved.
+            </p>
+            <p class="text-xs text-gray-400">
+                <span class="font-bold">Last Updated:</span> 1 December 2025
+            </p>
+            <a href="index.html" class="text-indigo-400 hover:text-indigo-300 text-sm mt-4 inline-block transition duration-300">
+                Back to Home
+            </a>
+        </div>
+    </footer>
+
+    <!-- LOGIK JAVASCRIPT UNTUK TRIGGER KESAN SLOW MOTION -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.reveal-item');
+            const baseDelay = 300; // Kelewatan permulaan
+            const staggerDelay = 500; // Kelewatan tambahan untuk setiap item (ditingkatkan sedikit)
+
+            items.forEach((item, index) => {
+                // Tentukan kelewatan keseluruhan berdasarkan kedudukan item
+                // Ini memastikan item yang tersisa akan muncul dengan jujukan yang betul.
+                const totalDelay = baseDelay + (index * staggerDelay);
+                
+                // Gunakan setTimeout untuk mencipta kesan berperingkat (staggered effect)
+                setTimeout(() => {
+                    item.classList.add('is-visible');
+                }, totalDelay);
+            });
+        });
+    </script>
+
+</body>
+</html>

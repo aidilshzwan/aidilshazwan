@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- MANDATORY: Ensure responsiveness on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | [Aidil Shazwan]</title>
+    <!-- Statement of Responsibility/Ownership -->
+    <meta name="author" content="[Aidil Shazwan] - IMD318 Individual Project">
+
+    <!-- Load Tailwind CSS via CDN for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the project */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f9; /* Light background */
+            color: #333;
+        }
+
+        /* --- NEW: Page Load Fade-in Animation --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Class applied to main content for animation */
+        .fade-in-content {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        /* Fixed navigation bar styling */
+        .header-nav {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        /* --- NEW: Enhanced Card Hover Effect (Lift) --- */
+        .experience-card {
+            /* Ensures transition applies to the new transform property */
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; 
+        }
+        
+        .experience-card:hover {
+            transform: translateY(-8px); /* Lifts the card up slightly on hover */
+        }
+        
+        /* CUSTOM MARKER STYLE using list-image-none and custom before element */
+        .custom-list {
+            /* Remove default list styling */
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .custom-list li {
+            position: relative;
+            padding-left: 2rem; /* Space adjusted for the emoji */
+        }
+
+        /* The custom marker (Muscle emoji 💪🏻) */
+        .custom-list li::before {
+            content: '💪🏻'; /* Replaced checkmark with muscle emoji */
+            font-size: 1.1rem; /* Adjust size for better visibility */
+            position: absolute;
+            left: 0;
+            top: 0; /* Adjust position vertically */
+            width: 1.5rem; /* Give more space for the emoji */
+            height: 1rem;
+            line-height: 1; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. FIXED NAVIGATION BAR (Responsive: hidden on mobile) -->
+    <header class="header-nav bg-white">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-indigo-600 hover:text-indigo-800 transition duration-300">
+                        [Aidil Shazwan]'s Portfolio
+                    </a>
+                </div>
+                <!-- Navigation Links - Added 'hidden md:flex' to prevent overflow on small screens -->
+                <div class="hidden md:flex space-x-4">
+                    <a href="index.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Home</a>
+                    <a href="biodata.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Biodata</a>
+                    <!-- Active Link Styling -->
+                    <a href="experience.html" class="text-white bg-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Experience</a>
+                    <a href="education.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Education</a>
+                    <a href="family.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Family</a>
+                    <a href="gallery.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Gallery</a>
+                    <a href="media.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Media Lab</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- MAIN CONTENT - Added 'fade-in-content' class for on-load animation -->
+    <main class="py-16 sm:py-24 fade-in-content">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-extrabold text-gray-900 border-b-4 border-indigo-500 inline-block pb-1">
+                    Professional Experience & Visuals
+                </h1>
+                <p class="text-gray-500 mt-2">Internships, part-time work, and major project involvement.</p>
+            </div>
+
+            <!-- Experience Timeline Container -->
+            <div class="space-y-12">
+                
+                <!-- Experience Item 1: Internship (Record Management) -->
+                <div class="experience-card bg-white p-6 sm:p-8 rounded-2xl shadow-xl border-l-4 border-teal-500 hover:shadow-2xl transition duration-300">
+                    <div class="flex justify-between items-start mb-2">
+                        <h2 class="text-2xl font-bold text-gray-800">
+                            Internship: <span class="text-teal-600">Record Management</span>
+                        </h2>
+                        <small class="text-gray-500 font-medium whitespace-nowrap">
+                            Jul 2025 – Sept 2025
+                        </small>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-600 mb-4">
+                        <a href="https://example.com/company" target="_blank" class="hover:text-indigo-600 underline">
+                            Pejabat Pendidkan Daerah Hulu Selangor 
+                        </a> | Selangor
+                    </h3>
+                    
+                    <!-- STATIC IMAGE SECTION FOR INTERNSHIP (Responsive grid) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 mb-6">
+                        <!-- NOTE: Using placeholder images as 'images/C1.jpg' is not accessible in this environment -->
+                        <img src="images/C1.jpg" 
+                            alt="Visual aid related to Record Management Internship" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/2DD4BF/ffffff?text=Internship+Image+1'"
+                            class="w-full h-auto rounded-lg shadow-md object-cover border-2 border-teal-300">
+                        <img src="images/C2.jpg" 
+                            alt="Screenshot of CMS platform or document migration" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/2DD4BF/ffffff?text=Internship+Image+2'"
+                            class="w-full h-auto rounded-lg shadow-md object-cover border-2 border-teal-300">
+                    </div>
+                    
+                    <!-- Unordered List for Key Achievements/Responsibilities -->
+                    <p class="font-medium text-gray-700 mb-2">Key Responsibilities & Achievements:</p>
+                    <!-- Apply custom list class -->
+                    <ul class="custom-list internship-list text-gray-600 space-y-2">
+                        <li>
+                            I have able to learned more thoroughly in managing AM files of <span class="font-bold">more than 20 files.</span> 
+                        </li>
+                        <li>
+                            Myself and other interns have successfully managed the program that took place at PPDHS.
+                        </li>
+                        <li>
+                            I also learned to use Excel with interns who came from various universities.
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Experience Item 2: Part-Time Role/Project (Dispatch) -->
+                <div class="experience-card bg-white p-6 sm:p-8 rounded-2xl shadow-xl border-l-4 border-orange-500 hover:shadow-2xl transition duration-300">
+                    <div class="flex justify-between items-start mb-2">
+                        <h2 class="text-2xl font-bold text-gray-800">
+                            Part-Time: <span class="text-orange-600">Dispatch</span>
+                        </h2>
+                        <small class="text-gray-500 font-medium whitespace-nowrap">
+                            Feb 2025 – Apr 2025
+                        </small>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-600 mb-4">
+                        J&T EXPRESS | Rawang
+                    </h3>
+                    
+                    <!-- STATIC IMAGE SECTION FOR PART-TIME (Responsive grid) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 mb-6">
+                        <!-- NOTE: Using placeholder images as 'images/B1.jpg' is not accessible in this environment -->
+                        <img src="images/B1.jpg" 
+                            alt="Visual aid related to Dispatch role" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/F97316/ffffff?text=Dispatch+Image+1'"
+                            class="w-full h-auto rounded-lg shadow-md object-cover border-2 border-orange-300">
+                        <img src="images/B2.jpg"
+                            alt="Visual of point-of-sale system or inventory" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/F97316/ffffff?text=Dispatch+Image+2'"
+                            class="w-full h-auto rounded-lg shadow-md object-cover border-2 border-orange-300">
+                    </div>
+
+                    <!-- Unordered List for Key Achievements/Responsibilities -->
+                    <p class="font-medium text-gray-700 mb-2">Transferable Skills Gained:</p>
+                    <!-- Apply custom list class -->
+                    <ul class="custom-list part-time-list text-gray-600 space-y-2">
+                        <li>
+                            Successful to manage my time more systematically.
+                        </li>
+                        <li>
+                            Successfully handled customer complaints, maintaining a consistently high customer satisfaction rating.
+                        </li>
+                        <li>
+                            Be able to communicate better with other staff.
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <!-- Paragraph for additional context/future plans -->
+            <p class="mt-12 text-lg text-center text-gray-600 p-4 bg-indigo-50 rounded-xl shadow-md">
+                I am actively seeking new opportunities to apply my knowledge of Information Management and web technologies in a professional setting after graduation. For further details, please refer to my full CV.
+            </p>
+
+        </div>
+    </main>
+    
+    <!-- 2. FOOTER (Consistent with other pages) -->
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm mb-2">
+                &copy; 2025 [Aidil Shazwan]. All Rights Reserved.
+            </p>
+            <p class="text-xs text-gray-400">
+                <span class="font-bold">Last Updated:</span> 1 December 2025
+            </p>
+            <a href="index.html" class="text-indigo-400 hover:text-indigo-300 text-sm mt-4 inline-block transition duration-300">
+                Back to Home
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>

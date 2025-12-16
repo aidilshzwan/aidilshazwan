@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- MESTI: Pastikan responsif pada semua peranti -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Aidil Shazwan</title>
+    <meta name="author" content="Aidil Shazwan - IMD318 Individual Project">
+
+    <!-- Muat Naik Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Import fon Inter dari Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; /* Latar belakang yang sangat cerah untuk kesan 'kemas' */
+            color: #212529;
+        }
+
+        /* Gaya bar navigasi tetap */
+        .header-nav {
+            /* Bayangan yang lebih lembut */
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        /* Gaya kad galeri dengan kesan peralihan yang licin */
+        .gallery-card {
+            transition: all 0.2s ease-in-out;
+            border: 1px solid #e9ecef; /* Garisan halus untuk definisi */
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-3px); /* Angkat sedikit */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            border-color: #4f46e5; /* Serlahkan dengan warna indigo */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. NAVIGASI ATAS (Kemas dan Tetap) -->
+    <header class="header-nav bg-white">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main Navigation">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo/Nama Portfolio -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-extrabold text-gray-800 hover:text-indigo-600 transition duration-300">
+                        Aidil Shazwan's Portfolio
+                    </a>
+                </div>
+                <!-- Pautan Navigasi (Dibuat scrollable pada skrin kecil) -->
+                <div class="flex flex-shrink-0 space-x-2 sm:space-x-4 overflow-x-auto whitespace-nowrap">
+                    <a href="index.html" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-700 px-3 py-2 rounded-lg text-sm font-medium transition duration-200">Home</a>
+                    <a href="biodata.html" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-700 px-3 py-2 rounded-lg text-sm font-medium transition duration-200">Biodata</a>
+                    <a href="experience.html" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-700 px-3 py-2 rounded-lg text-sm font-medium transition duration-200">Experience</a>
+                    <a href="education.html" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-700 px-3 py-2 rounded-lg text-sm font-medium transition duration-200">Education</a>
+                    
+                    <!-- PEMBETULAN: Pautan Family kini menunjuk ke family.html (Halaman Profil Utama) -->
+                    <a href="family.html" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-700 px-3 py-2 rounded-lg text-sm font-medium transition duration-200">Family</a>
+                    
+                    <!-- Pautan Aktif -->
+                    <a href="gallery.html" class="text-white bg-indigo-600 px-3 py-2 rounded-lg text-sm font-bold shadow-md hover:bg-indigo-700 transition duration-200">Gallery</a>
+                    <a href="media.html" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-700 px-3 py-2 rounded-lg text-sm font-medium transition duration-200">Media Lab</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="py-16 sm:py-20">
+        <!-- Gunakan max-w-7xl untuk menyamai navigasi dan memuatkan 6 kolum dengan selesa -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Tajuk Utama -->
+            <div class="text-center mb-10 sm:mb-16">
+                <h1 class="text-5xl font-extrabold text-gray-900 leading-tight">
+                    Koleksi Gambar (My Photo Gallery)
+                </h1>
+                <p class="text-lg text-gray-500 mt-2">Menyusun semua momen penting dalam portfolio ini.</p>
+            </div>
+
+            <!-- GRID GALERI: Dikemas kini kepada 4 Album -->
+            <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto">
+                
+                <!-- Album 1/4: Kehidupan Universiti -->
+                <div class="gallery-card bg-white rounded-xl shadow-sm overflow-hidden">
+                    <!-- Pautan ini menunjuk kepada university_album.html -->
+                    <a href="university_album.html" class="block">
+                        <img src="https://placehold.co/600x400/2563eb/ffffff?text=University+Life" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/2563eb/ffffff?text=University+Life'"
+                            alt="Placeholder for university life album" 
+                            class="w-full h-28 object-cover">
+                    </a>
+                    <div class="p-3 text-center">
+                        <h3 class="text-sm font-bold text-gray-800 mb-1">UiTM Campus Life</h3>
+                        <p class="text-xs text-gray-500 truncate">Memories from classes and dorms.</p>
+                    </div>
+                </div>
+
+                <!-- Album 2/4: Alam Semulajadi -->
+                <div class="gallery-card bg-white rounded-xl shadow-sm overflow-hidden">
+                    <a href="nature_album.html" class="block">
+                        <img src="https://placehold.co/600x400/059669/ffffff?text=Nature+Album" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/059669/ffffff?text=Nature+Album'"
+                            alt="Placeholder for nature photography album" 
+                            class="w-full h-28 object-cover">
+                    </a>
+                    <div class="p-3 text-center">
+                        <h3 class="text-sm font-bold text-gray-800 mb-1">Lanscape & Nature</h3>
+                        <p class="text-xs text-gray-500 truncate">Digital photography collection.</p>
+                    </div>
+                </div>
+                
+                <!-- Album 3/4: Sukan & Rekreasi -->
+                <div class="gallery-card bg-white rounded-xl shadow-sm overflow-hidden">
+                    <a href="sports_album.html" class="block">
+                        <img src="https://placehold.co/600x400/4c1d95/ffffff?text=Sports+Team" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/4c1d95/ffffff?text=Sports+Team'"
+                            alt="Placeholder for sports and hobbies album" 
+                            class="w-full h-28 object-cover">
+                    </a>
+                    <div class="p-3 text-center">
+                        <h3 class="text-sm font-bold text-gray-800 mb-1">Team & Recreation</h3>
+                        <p class="text-xs text-gray-500 truncate">Badminton games and team fun.</p>
+                    </div>
+                </div>
+
+                <!-- Album 4/4: Momen Rawak (All Random Moment) -->
+                <div class="gallery-card bg-white rounded-xl shadow-sm overflow-hidden">
+                    <a href="all_random.html" class="block">
+                        <img src="https://placehold.co/600x400/8b5cf6/ffffff?text=All+Random+Moment" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/8b5cf6/ffffff?text=All+Random+Moment'"
+                            alt="Placeholder for random moments album" 
+                            class="w-full h-28 object-cover">
+                    </a>
+                    <div class="p-3 text-center">
+                        <h3 class="text-sm font-bold text-gray-800 mb-1">All Random Moment</h3>
+                        <p class="text-xs text-gray-500 truncate">Unplanned memories and casual photos.</p>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+    
+    <!-- 2. KAKI LAMAN (Footer) -->
+    <footer class="bg-gray-900 text-white py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <p class="text-sm mb-2">
+                &copy; 2025 Aidil Shazwan. All Rights Reserved. IMD318 Project.
+            </p>
+            
+            <!-- Pautan Back to Home telah dipindahkan ke sini -->
+            <p class="mb-2 mt-2">
+                <a href="index.html" class="text-indigo-400 hover:text-indigo-300 font-semibold transition duration-200">
+                    Back to Home
+                </a>
+            </p>
+
+            <p class="text-xs text-gray-400">
+                <span class="font-semibold text-indigo-400">Status:</span> Album dikemas kini kepada 4 kategori sahaja.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

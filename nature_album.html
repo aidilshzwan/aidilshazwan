@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- MANDATORY: Ensure responsiveness on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Album | [Your Name/Matric No.]</title>
+    <!-- Statement of Responsibility/Ownership -->
+    <meta name="author" content="[Your Name/Matric No.] - IMD318 Individual Project">
+
+    <!-- Load Tailwind CSS via CDN for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the project */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f9; /* Light background */
+            color: #333;
+        }
+
+        /* Fixed navigation bar styling */
+        .header-nav {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        
+        /* Styling for individual photos */
+        .photo-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .photo-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Image sizing to ensure uniform grid */
+        .photo-image {
+            aspect-ratio: 1/1; /* Square images */
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. FIXED NAVIGATION BAR (Consistent Layout) -->
+    <header class="header-nav bg-white">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-indigo-600 hover:text-indigo-800 transition duration-300">
+                        [Your Name]'s Portfolio
+                    </a>
+                </div>
+                <!-- Navigation Links - Pastikan Gallery tetap diserlahkan -->
+                <div class="flex space-x-4">
+                    <a href="index.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Home</a>
+                    <a href="biodata.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Biodata</a>
+                    <a href="experience.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Experience</a>
+                    <a href="education.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Education</a>
+                    <a href="family.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Family</a>
+                    <!-- Active Link Styling for Gallery section -->
+                    <a href="gallery.html" class="text-white bg-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Gallery</a>
+                    <a href="media.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Media Lab</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="py-16 sm:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Pautan Kembali ke Laman Galeri Utama (Kini Dikekalkan) -->
+            <div class="mb-8">
+                <a href="gallery.html" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    Kembali ke Album Utama
+                </a>
+            </div>
+
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-extrabold text-gray-900 border-b-4 border-emerald-500 inline-block pb-1">
+                    Album: Landscape & Nature
+                </h1>
+                <p class="text-gray-500 mt-2">Menangkap keindahan alam semula jadi di sekitar kawasan perumahan dan percutian.</p>
+            </div>
+
+            <div class="text-center mb-8 p-4 bg-green-50 rounded-lg border border-green-300">
+                <p class="text-green-800 font-medium text-sm">
+                    **ARAHAN:** Gantikan laluan gambar `images/nature1.jpg`, `images/nature2.jpg`, dsb., dengan nama fail gambar anda sendiri.
+                </p>
+            </div>
+
+            <!-- Photo Grid Section (Responsive Layout - 3 columns on desktop, 2 on mobile) -->
+            <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+                
+                <!-- Photo 1 -->
+                <div class="photo-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl">
+                    <img src="images/nature1.jpg" 
+                        alt="Pemandangan matahari terbit di atas bukit." 
+                        class="photo-image"
+                        onerror="this.onerror=null; this.src='https://placehold.co/400x400/065f46/ffffff?text=Nature+01';">
+                    <div class="p-3">
+                        <p class="text-sm font-medium text-gray-700">Matahari Terbit</p>
+                        <p class="text-xs text-gray-500">Kuala Kubu Bharu, 2024</p>
+                    </div>
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="photo-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl">
+                    <img src="images/nature2.jpg" 
+                        alt="Air terjun tersembunyi dengan lumut hijau." 
+                        class="photo-image"
+                        onerror="this.onerror=null; this.src='https://placehold.co/400x400/065f46/ffffff?text=Nature+02';">
+                    <div class="p-3">
+                        <p class="text-sm font-medium text-gray-700">Air Terjun</p>
+                        <p class="text-xs text-gray-500">Hulu Langat, 2023</p>
+                    </div>
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="photo-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl">
+                    <img src="images/nature3.jpg" 
+                        alt="Makro bunga kembang sepatu merah." 
+                        class="photo-image"
+                        onerror="this.onerror=null; this.src='https://placehold.co/400x400/065f46/ffffff?text=Nature+03';">
+                    <div class="p-3">
+                        <p class="text-sm font-medium text-gray-700">Close-up Flora</p>
+                        <p class="text-xs text-gray-500">Taman Bunga, 2024</p>
+                    </div>
+                </div>
+                
+                <!-- Photo 4 -->
+                <div class="photo-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl">
+                    <img src="images/nature4.jpg" 
+                        alt="Jalan berliku di hutan hujan tropika." 
+                        class="photo-image"
+                        onerror="this.onerror=null; this.src='https://placehold.co/400x400/065f46/ffffff?text=Nature+04';">
+                    <div class="p-3">
+                        <p class="text-sm font-medium text-gray-700">Trek Hutan</p>
+                        <p class="text-xs text-gray-500">Taman Negara, 2023</p>
+                    </div>
+                </div>
+
+                <!-- Photo 5 -->
+                <div class="photo-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl">
+                    <img src="images/nature5.jpg" 
+                        alt="Gurun pasir dengan bayangan panjang." 
+                        class="photo-image"
+                        onerror="this.onerror=null; this.src='https://placehold.co/400x400/065f46/ffffff?text=Nature+05';">
+                    <div class="p-3">
+                        <p class="text-sm font-medium text-gray-700">Pemandangan Ladang</p>
+                        <p class="text-xs text-gray-500">Sungai Siput, 2024</p>
+                    </div>
+                </div>
+
+                <!-- Photo 6 -->
+                <div class="photo-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl">
+                    <img src="images/nature6.jpg" 
+                        alt="Burung helang terbang di langit biru." 
+                        class="photo-image"
+                        onerror="this.onerror=null; this.src='https://placehold.co/400x400/065f46/ffffff?text=Nature+06';">
+                    <div class="p-3">
+                        <p class="text-sm font-medium text-gray-700">Burung Liar</p>
+                        <p class="text-xs text-gray-500">Bukit Fraser, 2023</p>
+                    </div>
+                </div>
+                
+                <!-- Photo 7 -->
+                <div class="photo-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl">
+                    <img src="images/nature7.jpg" 
+                        alt="Pemandangan sungai yang mengalir deras." 
+                        class="photo-image"
+                        onerror="this.onerror=null; this.src='https://placehold.co/400x400/065f46/ffffff?text=Nature+07';">
+                    <div class="p-3">
+                        <p class="text-sm font-medium text-gray-700">Sungai</p>
+                        <p class="text-xs text-gray-500">Kuantan, 2024</p>
+                    </div>
+                </div>
+
+                <!-- Photo 8 -->
+                <div class="photo-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl">
+                    <img src="images/nature8.jpg" 
+                        alt="Pokok besar di tengah padang rumput." 
+                        class="photo-image"
+                        onerror="this.onerror=null; this.src='https://placehold.co/400x400/065f46/ffffff?text=Nature+08';">
+                    <div class="p-3">
+                        <p class="text-sm font-medium text-gray-700">Pokok Tunggal</p>
+                        <p class="text-xs text-gray-500">Kuala Lumpur, 2023</p>
+                    </div>
+                </div>
+                
+            </section>
+
+        </div>
+    </main>
+    
+    <!-- 2. FOOTER (Consistent with other pages, tanpa pautan "Back to Gallery") -->
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm mb-2">
+                &copy; 2025 [Your Name/Matric No.]. All Rights Reserved.
+            </p>
+            <p class="text-xs text-gray-400">
+                <span class="font-bold">Last Updated:</span> 1 December 2025
+            </p>
+            <!-- Pautan Kembali ke Galeri di Footer TELAH DIBUANG -->
+        </div>
+    </footer>
+
+</body>
+</html>

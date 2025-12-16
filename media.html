@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMD318 Multimedia Lab | [Aidil Shazwan]</title>
+    <!-- Responsibility/Ownership Statement -->
+    <meta name="author" content="[Aidil Shazwan] - IMD318 Individual Project">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+        }
+
+        .header-nav {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        
+        /* Ensure the video element is placed in a good aspect ratio */
+        .video-wrapper {
+            /* Mimic 16:9 aspect ratio to ensure video scales well */
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            overflow: hidden;
+        }
+
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="header-nav bg-white">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-indigo-600 hover:text-indigo-800 transition duration-300">
+                        [Aidil Shazwan]'s Portfolio
+                    </a>
+                </div>
+                <div class="flex space-x-4">
+                    <!-- Standard Navigation Links -->
+                    <a href="index.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Home</a>
+                    <a href="biodata.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Biodata</a>
+                    <a href="experience.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Experience</a>
+                    <a href="education.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Education</a>
+                    <a href="family.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Family</a>
+                    <a href="gallery.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Gallery</a>
+                    <a href="media.html" class="text-white bg-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Media Lab</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-extrabold text-gray-900 border-b-4 border-indigo-500 inline-block pb-1">
+                MULTIMEDIA LAB 
+            </h1>
+            <p class="text-gray-500 mt-2">Demonstration using the HTML5 &lt;video&gt; tag to load MP4 files.</p>
+        </div>
+
+        <!-- SECTION: Responsive Video Grid (2x2 Arrangement) -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 border-l-4 border-teal-500 pl-4">Any Random Video</h2>
+            
+            <!-- Main Grid: Uses grid-cols-1 and md:grid-cols-2 for 2x2 arrangement on desktop/tablet -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Video Box 1 -->
+                <div class="p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="video-wrapper">
+                        <!-- Using the <video> tag for direct MP4 files -->
+                        <video controls preload="metadata">
+                            <!-- !!! IMPORTANT: REPLACE the following URL with your actual MP4 video link -->
+                            <source src="videos/v1.mp4" type="video/mp4">
+                            Your browser does not support the HTML5 video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Video Box 2 -->
+                <div class="p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="video-wrapper">
+                        <!-- Using the <video> tag for direct MP4 files -->
+                        <video controls preload="metadata">
+                            <!-- !!! IMPORTANT: REPLACE the following URL with your actual MP4 video link -->
+                            <source src="videos/v2.mp4" type="video/mp4">
+                            Your browser does not support the HTML5 video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Video Box 3 -->
+                <div class="p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="video-wrapper">
+                        <!-- Using the <video> tag for direct MP4 files -->
+                        <video controls preload="metadata">
+                            <!-- !!! IMPORTANT: REPLACE the following URL with your actual MP4 video link -->
+                            <source src="videos/v3.mp4" type="video/mp4">
+                            Your browser does not support the HTML5 video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Video Box 4 -->
+                <div class="p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="video-wrapper">
+                        <!-- Using the <video> tag for direct MP4 files -->
+                        <video controls preload="metadata">
+                            <!-- !!! IMPORTANT: REPLACE the following URL with your actual MP4 video link -->
+                            <source src="videos/v4.mp4" type="video/mp4">
+                            Your browser does not support the HTML5 video tag.
+                        </video>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <!-- END VIDEO GRID SECTION -->
+
+
+        <!-- Section: Spotify Embed -->
+        <section class="mb-12 p-6 bg-white rounded-xl shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4 text-indigo-600 border-l-4 border-indigo-300 pl-4">Spotify Track Embed (using iframe)</h2>
+            <div class="max-w-lg mx-auto overflow-hidden rounded-xl shadow-md">
+                <!-- Iframe for external content like Spotify (kept using iframe because it is an external source) -->
+                <iframe style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/track/7hgdBoFN7AE2c6Gwh0zS4P?utm_source=generator" 
+                        width="100%" 
+                        height="352" 
+                        frameBorder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                </iframe>
+            </div>
+            <p class="mt-4 text-sm text-gray-600 text-center">
+                This module demonstrates the use of the &lt;iframe&gt; tag to professionally embed external elements (audio).
+            </p>
+        </section>
+        
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sm">
+                &copy; 2025 [Aidil Shazwan]. IMD318 Multimedia Submission.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

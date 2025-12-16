@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- MESTI: Pastikan responsif pada semua peranti -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album: All Random Moment | Aidil Shazwan</title>
+    <meta name="author" content="Aidil Shazwan - IMD318 Individual Project">
+
+    <!-- Muat Naik Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Import fon Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; /* Light background */
+            color: #212529;
+        }
+
+        /* Gaya bar navigasi tetap */
+        .header-nav {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        
+        /* Gaya Kad Gambar */
+        .photo-card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            border: 1px solid #e9ecef;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-4px); /* Angkat sedikit untuk kesan interaktif */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+            border-color: #4f46e5; /* Warna border sama dengan warna aktif navigasi (Indigo-600) */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. NAVIGASI ATAS -->
+    <header class="header-nav bg-white">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main Navigation">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo/Nama Portfolio -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-extrabold text-gray-800 hover:text-indigo-600 transition duration-300">
+                        Aidil Shazwan's Portfolio
+                    </a>
+                </div>
+                <!-- Pautan Navigasi (Gallery di set sebagai aktif) -->
+                <div class="flex flex-shrink-0 space-x-2 sm:space-x-4 overflow-x-auto whitespace-nowrap">
+                    <a href="index.html" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-700 px-3 py-2 rounded-lg text-sm font-medium transition duration-200">Home</a>
+                    <a href="biodata.html" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-700 px-3 py-2 rounded-lg text-sm font-medium transition duration-200">Biodata</a>
+                    <a href="experience.html" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-700 px-3 py-2 rounded-lg text-sm font-medium transition duration-200">Experience</a>
+                    <a href="education.html" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-700 px-3 py-2 rounded-lg text-sm font-medium transition duration-200">Education</a>
+                    <a href="family.html" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-700 px-3 py-2 rounded-lg text-sm font-medium transition duration-200">Family</a>
+                    
+                    <!-- Pautan GALLERY adalah AKTIF -->
+                    <a href="gallery.html" class="text-white bg-indigo-600 px-3 py-2 rounded-lg text-sm font-bold shadow-md hover:bg-indigo-700 transition duration-200">Gallery</a>
+                    
+                    <a href="media.html" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-700 px-3 py-2 rounded-lg text-sm font-medium transition duration-200">Media Lab</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="py-16 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Bahagian Tajuk Album (All Random Moment) -->
+            <div class="mb-10 sm:mb-16">
+                <a href="gallery.html" class="text-indigo-600 hover:text-indigo-800 font-medium text-sm inline-flex items-center">
+                    <span class="mr-1">&larr;</span> Kembali ke Galeri Utama
+                </a>
+                <h1 class="text-4xl font-extrabold text-gray-900 mt-2">
+                    All Random Moment (Foto Santai)
+                </h1>
+                <p class="text-lg text-gray-500 mt-1">Koleksi gambar tanpa tema yang spesifik, hanya memori spontan dan rawak.</p>
+            </div>
+
+            <!-- GRID GAMBAR: 3 Kolum pada Skrin Besar, 2 Kolum pada Skrin Sederhana -->
+            <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                
+                <!-- Gambar 1/6: Selfie Santai -->
+                <div class="photo-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="images/random1.jpg" 
+                        alt="Foto Selfie Santai" 
+                        onerror="this.onerror=null; this.src='https://placehold.co/800x600/6b7280/ffffff?text=Random+Selfie+01'"
+                        class="w-full h-56 object-cover">
+                    <!-- Kandungan di bawah telah DIBUANG -->
+                </div>
+
+                <!-- Gambar 2/6: Pemandangan Bandar -->
+                <div class="photo-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="images/random2.jpg" 
+                        alt="Foto Pemandangan Malam Bandar" 
+                        onerror="this.onerror=null; this.src='https://placehold.co/800x600/10b981/ffffff?text=Cityscape+Night'"
+                        class="w-full h-56 object-cover">
+                    <!-- Kandungan di bawah telah DIBUANG -->
+                </div>
+
+                <!-- Gambar 3/6: Makanan (Foodie Moment) -->
+                <div class="photo-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="images/random3.jpg" 
+                        alt="Foto Makanan Sedap" 
+                        onerror="this.onerror=null; this.src='https://placehold.co/800x600/f97316/ffffff?text=Food+Random'"
+                        class="w-full h-56 object-cover">
+                    <!-- Kandungan di bawah telah DIBUANG -->
+                </div>
+
+                <!-- Gambar 4/6: Bersama Kucing Peliharaan -->
+                <div class="photo-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="images/random4.jpg" 
+                        alt="Foto Bersama Kucing" 
+                        onerror="this.onerror=null; this.src='https://placehold.co/800x600/7c3aed/ffffff?text=Pet+Moment'"
+                        class="w-full h-56 object-cover">
+                    <!-- Kandungan di bawah telah DIBUANG -->
+                </div>
+                
+                <!-- Gambar 5/6: Hobi/Buku -->
+                <div class="photo-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="images/random5.jpg" 
+                        alt="Foto Aktiviti Membaca" 
+                        onerror="this.onerror=null; this.src='https://placehold.co/800x600/1e3a8a/ffffff?text=Reading+Time'"
+                        class="w-full h-56 object-cover">
+                    <!-- Kandungan di bawah telah DIBUANG -->
+                </div>
+                
+                <!-- Gambar 6/6: Group Selfie -->
+                <div class="photo-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="images/random6.jpg" 
+                        alt="Foto Kawan-kawan" 
+                        onerror="this.onerror=null; this.src='https://placehold.co/800x600/ef4444/ffffff?text=Friends+Gathering'"
+                        class="w-full h-56 object-cover">
+                    <!-- Kandungan di bawah telah DIBUANG -->
+                </div>
+
+            </section>
+
+        </div>
+        
+    </main>
+    
+    <!-- 2. KAKI LAMAN (Footer) -->
+    <footer class="bg-gray-900 text-white py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm mb-2">
+                &copy; 2025 Aidil Shazwan. All Rights Reserved. IMD318 Project.
+            </p>
+            
+            <p class="text-xs text-gray-400">
+                <span class="font-semibold text-indigo-400">Album:</span> All Random Moment (Foto Santai).
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- MANDATORY: Ensure responsiveness on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | [Aidil Shazwan]'s Portfolio</title>
+    <!-- Statement of Responsibility/Ownership -->
+    <meta name="author" content="[Aidil Shazwan] - IMD318 Individual Project">
+
+    <!-- Load Tailwind CSS via CDN for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the project */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f9; /* Light background */
+            color: #333;
+        }
+
+        /* Fixed navigation bar styling */
+        .header-nav {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        /* Hero section styling for background gradient */
+        .hero-section {
+            background: linear-gradient(135deg, #4f46e5 0%, #a78bfa 100%); /* Indigo to Violet gradient */
+            color: white;
+            padding: 8rem 0;
+        }
+
+        /* Card styling for subtle depth */
+        .nav-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .nav-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. FIXED NAVIGATION BAR -->
+    <header class="header-nav bg-white">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-indigo-600 hover:text-indigo-800 transition duration-300">
+                        [Aidil Shazwan]'s Portfolio
+                    </a>
+                </div>
+                <!-- Navigation Links -->
+                <div class="flex space-x-4">
+                    <!-- Active Link Styling -->
+                    <a href="index.html" class="text-white bg-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Home</a>
+                    <a href="biodata.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Biodata</a>
+                    <a href="experience.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Experience</a>
+                    <a href="education.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Education</a>
+                    <a href="family.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Family</a>
+                    <a href="gallery.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Gallery</a>
+                    <a href="media.html" class="text-gray-900 hover:bg-indigo-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Media Lab</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        
+        <!-- 2. HERO SECTION -->
+        <section class="hero-section text-center">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-5xl font-extrabold tracking-tight sm:text-6xl mb-4">
+                    Welcome to [Aidil Shazwan]'s Digital Portfolio
+                </h1>
+                <p class="text-xl text-indigo-100 sm:text-2xl mb-4">
+                    IMD318: Introduction to Web Content Management and Design Project
+                </p>
+                
+                <!-- START: REAL-TIME CLOCK ADDITION (Size adjusted to match the CTA button) -->
+                <div id="live-clock" class="text-xl font-mono font-medium tracking-wider mb-8 text-white bg-indigo-700/70 px-8 py-3 rounded-xl inline-block shadow-xl">
+                    <!-- Time will be displayed here by JavaScript -->
+                    Loading Time...
+                </div>
+                <!-- END: REAL-TIME CLOCK ADDITION -->
+
+                <!-- Centralized Call-to-Action -->
+                <a href="biodata.html" class="inline-block px-8 py-3 border border-transparent text-base font-medium rounded-xl text-indigo-700 bg-white hover:bg-indigo-50 shadow-lg transition duration-300">
+                    Explore My Profile
+                </a>
+            </div>
+        </section>
+
+        <!-- 3. MAIN CONTENT: Navigation Cards -->
+        <section class="py-16 sm:py-24">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 border-b-2 border-teal-500 inline-block pb-1">
+                        Portfolio Sections
+                    </h2>
+                    <p class="text-gray-500 mt-2">Navigate through the different aspects of my personal and academic life.</p>
+                </div>
+
+                <!-- Grid of Navigation Cards (3 columns on desktop, 1 on mobile) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Card 1: Biodata -->
+                    <a href="biodata.html" class="nav-card p-6 bg-white rounded-xl shadow-md border-t-4 border-indigo-500 hover:border-indigo-700 block">
+                        <div class="flex items-center space-x-4">
+                            <span class="text-4xl text-indigo-600">👤</span>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Biodata</h3>
+                                <p class="text-sm text-gray-500">Personal details, contact info, and aspirations.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Card 2: Experience -->
+                    <a href="experience.html" class="nav-card p-6 bg-white rounded-xl shadow-md border-t-4 border-teal-500 hover:border-teal-700 block">
+                        <div class="flex items-center space-x-4">
+                            <span class="text-4xl text-teal-600">💼</span>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Experience</h3>
+                                <p class="text-sm text-gray-500">Skills, co-curricular involvement, and achievements.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Card 3: Education -->
+                    <a href="education.html" class="nav-card p-6 bg-white rounded-xl shadow-md border-t-4 border-yellow-500 hover:border-yellow-700 block">
+                        <div class="flex items-center space-x-4">
+                            <span class="text-4xl text-yellow-600">🎓</span>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Education</h3>
+                                <p class="text-sm text-gray-500">Academic history from kindergarten to university.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Card 4: Family -->
+                    <a href="family.html" class="nav-card p-6 bg-white rounded-xl shadow-md border-t-4 border-red-500 hover:border-red-700 block">
+                        <div class="flex items-center space-x-4">
+                            <span class="text-4xl text-red-600">🏡</span>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Family</h3>
+                                <p class="text-sm text-gray-500">Insights into my support system and hobbies.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Card 5: Gallery -->
+                    <a href="gallery.html" class="nav-card p-6 bg-white rounded-xl shadow-md border-t-4 border-purple-500 hover:border-purple-700 block">
+                        <div class="flex items-center space-x-4">
+                            <span class="text-4xl text-purple-600">📸</span>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Gallery</h3>
+                                <p class="text-sm text-gray-500">A visual collection of personal photos and project screenshots.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Card 6: Media Lab (Technical Demo) -->
+                    <a href="media.html" class="nav-card p-6 bg-white rounded-xl shadow-md border-t-4 border-gray-500 hover:border-gray-700 block">
+                        <div class="flex items-center space-x-4">
+                            <span class="text-4xl text-gray-600">💻</span>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900">Media Lab (Final Demo)</h3>
+                                <p class="text-sm text-gray-500">Interactive demonstration of web technologies.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PROJECT STATEMENT/FOOTER INFO -->
+        <section class="bg-gray-100 py-12">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Project Compliance Statement</h3>
+                <p class="text-sm text-gray-600 mb-2">
+                    This portfolio adheres to the IMD318 Individual Project instructions, utilizing HTML, CSS (via Tailwind CDN), and JavaScript (where required, such as in `media.html`) constructed primarily using a text-based authoring approach.
+                </p>
+                <p class="text-xs text-gray-400">
+                    Creation Date: November 2025 | Last Updated: December 2025
+                </p>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- 5. FOOTER (Consistent with other pages) -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm mb-2">
+                &copy; 2025 [Aidil Shazwan]. All Rights Reserved.
+            </p>
+            <a href="index.html" class="text-indigo-400 hover:text-indigo-300 text-sm mt-4 inline-block transition duration-300">
+                Back to Top
+            </a>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Live Clock -->
+    <script>
+        // Function to update the current time
+        function updateClock() {
+            const now = new Date();
+            // Format the time string (e.g., 04:25:00 PM)
+            const timeString = now.toLocaleTimeString('en-US', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true 
+            });
+
+            const clockElement = document.getElementById('live-clock');
+            if (clockElement) {
+                clockElement.textContent = timeString;
+            }
+        }
+
+        // 1. Call the function once to load the time immediately
+        updateClock();
+
+        // 2. Set the interval to update every 1000 milliseconds (1 second)
+        setInterval(updateClock, 1000);
+    </script>
+
+</body>
+</html>

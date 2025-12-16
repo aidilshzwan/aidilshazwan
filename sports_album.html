@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- MESTI: Pastikan responsif pada semua peranti -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album: Aktiviti Sukan & Riadah | [Your Name]</title>
+    <meta name="author" content="[Your Name] - IMD318 Individual Project">
+
+    <!-- Muat Naik Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Import fon Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; /* Light background */
+            color: #212529;
+        }
+
+        /* Gaya bar navigasi tetap */
+        .header-nav {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        
+        /* Gaya Kad Gambar */
+        .photo-card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            border: 1px solid #e9ecef;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-4px); /* Angkat sedikit untuk kesan interaktif */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. NAVIGASI ATAS -->
+    <header class="header-nav bg-white">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main Navigation">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo/Nama Portfolio -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-extrabold text-gray-800 hover:text-indigo-600 transition duration-300">
+                        [Your Name]'s Portfolio
+                    </a>
+                </div>
+                <!-- Pautan Navigasi (Dibuat scrollable pada skrin kecil) -->
+                <div class="flex flex-shrink-0 space-x-2 sm:space-x-4 overflow-x-auto whitespace-nowrap">
+                    <a href="index.html" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-700 px-3 py-2 rounded-lg text-sm font-medium transition duration-200">Home</a>
+                    <a href="biodata.html" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-700 px-3 py-2 rounded-lg text-sm font-medium transition duration-200">Biodata</a>
+                    <a href="experience.html" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-700 px-3 py-2 rounded-lg text-sm font-medium transition duration-200">Experience</a>
+                    <a href="education.html" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-700 px-3 py-2 rounded-lg text-sm font-medium transition duration-200">Education</a>
+                    <a href="family.html" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-700 px-3 py-2 rounded-lg text-sm font-medium transition duration-200">Family</a>
+                    <!-- Pautan Aktif (Gallery) -->
+                    <a href="gallery.html" class="text-white bg-indigo-600 px-3 py-2 rounded-lg text-sm font-bold shadow-md hover:bg-indigo-700 transition duration-200">Gallery</a>
+                    <a href="media.html" class="text-gray-600 hover:bg-gray-100 hover:text-indigo-700 px-3 py-2 rounded-lg text-sm font-medium transition duration-200">Media Lab</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="py-16 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Bahagian Tajuk Album (Aktiviti Sukan) -->
+            <div class="mb-10 sm:mb-16">
+                <a href="gallery.html" class="text-indigo-600 hover:text-indigo-800 font-medium text-sm inline-flex items-center">
+                    <span class="mr-1">&larr;</span> Kembali ke Galeri Utama
+                </a>
+                <h1 class="text-4xl font-extrabold text-gray-900 mt-2">
+                    Aktiviti Sukan & Riadah (Sports & Leisure)
+                </h1>
+                <p class="text-lg text-gray-500 mt-1">Penyertaan dalam acara sukan, latihan, dan aktiviti riadah.</p>
+            </div>
+
+            <!-- GRID GAMBAR: 3 Kolum pada Skrin Besar, 2 Kolum pada Skrin Sederhana -->
+            <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                
+                <!-- Gambar 1/6: Bola Sepak/Futsal -->
+                <div class="photo-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="images/sports1.jpg" 
+                        alt="Foto Pertandingan Futsal" 
+                        class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <p class="text-sm font-semibold text-gray-800 mb-1">Perlawanan Futsal Persahabatan</p>
+                        <p class="text-xs text-gray-500">24 Mei 2024 | Semangat berpasukan di padang futsal.</p>
+                    </div>
+                </div>
+
+                <!-- Gambar 2/6: Lari Marathon/Acara Larian -->
+                <div class="photo-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="images/sports2.jpg" 
+                        alt="Foto Acara Larian Amal" 
+                        class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <p class="text-sm font-semibold text-gray-800 mb-1">Acara Larian Amal UiTM</p>
+                        <p class="text-xs text-gray-500">10 April 2024 | Garisan penamat yang menggembirakan.</p>
+                    </div>
+                </div>
+
+                <!-- Gambar 3/6: Badminton/Sukan Dalam Dewan -->
+                <div class="photo-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="images/sports3.jpg" 
+                        alt="Foto Sesi Latihan Badminton" 
+                        class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <p class="text-sm font-semibold text-gray-800 mb-1">Latihan Badminton Mingguan</p>
+                        <p class="text-xs text-gray-500">Setiap Selasa | Meningkatkan kemahiran servis.</p>
+                    </div>
+                </div>
+
+                <!-- Gambar 4/6: Hiking/Aktiviti Luar -->
+                <div class="photo-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="images/sports4.jpg" 
+                        alt="Foto Aktiviti Mendaki Gunung" 
+                        class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <p class="text-sm font-semibold text-gray-800 mb-1">Ekspedisi Mendaki Bukit Broga</p>
+                        <p class="text-xs text-gray-500">15 Mac 2024 | Pemandangan indah di puncak.</p>
+                    </div>
+                </div>
+                
+                <!-- Gambar 5/6: Senaman/Gim -->
+                <div class="photo-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="images/sports5.jpg" 
+                        alt="Foto Sesi Senaman di Gim" 
+                        class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <p class="text-sm font-semibold text-gray-800 mb-1">Rutine Senaman Pagi</p>
+                        <p class="text-xs text-gray-500">Januari 2024 | Kekal sihat dan cergas.</p>
+                    </div>
+                </div>
+                
+                <!-- Gambar 6/6: Majlis Sukan (Closing Ceremony) -->
+                <div class="photo-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="images/sports6.jpg" 
+                        alt="Foto Penutup Hari Sukan" 
+                        class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <p class="text-sm font-semibold text-gray-800 mb-1">Majlis Penutup Hari Sukan Fakulti</p>
+                        <p class="text-xs text-gray-500">3 November 2023 | Merayakan kejayaan pasukan.</p>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+    
+    <!-- 2. KAKI LAMAN (Footer) -->
+    <footer class="bg-gray-900 text-white py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm mb-2">
+                &copy; 2025 [Your Name]. All Rights Reserved. IMD318 Project.
+            </p>
+            <p class="text-xs text-gray-400">
+                <span class="font-semibold text-indigo-400">Album:</span> Aktiviti Sukan & Riadah.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
